@@ -1,0 +1,163 @@
+.downPan{
+	width: calc(100% - 10px);
+	border-radius: 40px;
+	background: #fff;
+	padding: 5px;
+	margin-top: 80px;
+}
+.stepBox p.lined{
+	margin: 10px 0 0 0;
+}
+.stepBox p::before,
+.stepBox p::after{
+	background: #222;
+}
+
+.stepBox .stepList {
+	padding: 20px;
+	flex-flow: row wrap;
+}
+.stepBox .stepList .steps{
+	width: 400px;
+	margin: 20px;
+}
+
+.stepBox .stepList .steps .num{
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 50px;
+  height: 50px;
+  background: #00ff4e;
+  box-shadow: 0 0 40px #00ff44;
+  animation: glow 13s ease infinite calc(var(--i)*-5s) alternate;
+  border-radius: 50%;
+  color: #222;
+}
+@keyframes glow{
+	0%{
+		filter: hue-rotate(0deg);
+		transform: scale(.8);
+	}
+	100%{
+		filter: hue-rotate(360deg);
+		transform: scale(1);
+	}
+}
+.stepBox .stepList .steps img{
+	width: 100%;
+	border-left: 2px solid #0099ff;
+	border-radius: 0 10px 10px 0;
+}
+.stepBox .stepList .steps .capt{
+	font-size: .9em;
+	color: #333;
+	padding: 5px 0;
+	border-left: 2px solid #0099ff;
+	padding-left: 7px;
+	filter: hue-rotate(calc(var(--i)*47deg));
+}
+
+
+.downPan.downloads{
+	margin-top: 150px;
+}
+.downPan .downBox,
+.downPan.downloads .stepBox{
+	display: none;
+}
+.downPan.downloads .downBox{
+	display: flex;
+}
+.downPan.downloads .top{
+  --w: 400px;
+  width: var(--w);
+  height: calc(var(--w)*9/16);
+  background: #fff;
+  top: -100px;
+  box-shadow: 0 30px 70px #0000002b;
+  border-radius: 10px;
+}
+.downPan.downloads .top img{
+	opacity: 0;
+	transition: all 1s;
+	width: 100%;
+	height: 100%;
+  border-radius: 10px;
+	object-fit: cover;
+	position: absolute;
+	pointer-events: none;
+}
+.downPan.downloads .top.loaded span{
+	display: none;
+}
+.downPan.downloads .top.loaded img{
+	opacity: 1;
+}
+.downPan.downloads .bottom {
+  top: -50px;
+  flex-flow: row wrap;
+}
+.downPan.downloads .bottom .type{
+  width: 80%;
+  background: #ffff;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #999;
+  background: #eee;
+}
+.downPan.downloads .bottom .type .head{
+	padding: 10px;
+	color: #333;
+}
+.downPan.downloads .bottom .type .lnk{
+	width: 100%;
+	height: 50px;
+	margin: 2px 0;
+	cursor: pointer;
+}
+.downPan.downloads .bottom .type .lnk > *{
+	width: 60px;
+	height: 40px;
+	display: flex;align-items: center;justify-content: center;
+	border-right: 1px solid #888;
+}
+
+.downPan.downloads .bottom .type .lnk > *:last-child{
+	border-right: none;
+}
+.downPan.downloads .bottom .type .lnk > p{
+	width: 100%;
+	justify-content: flex-start;
+	padding-left: 10px;
+	color: #555;
+}
+
+.downPan.downloads .bottom .type .lnk > span svg{
+	width: 20px;
+	fill: #ab5fca;
+}
+.downPan.downloads .bottom .mnLnks .lnk{
+	padding: 8px;
+	background: #fff;
+	border-bottom: 1px solid #aaa;
+}
+
+
+@media screen and (max-width: 500px){
+	.downPan{
+		border-radius: 10px;
+	}
+	.stepBox .stepList .steps {
+		width: 100%;
+    margin: 20px 0;
+  }
+
+  .downPan.downloads .bottom .type {
+    width: 100%;
+  }
+  .downPan.downloads .top {
+    --w: 80vw;
+  }
+}
