@@ -37,7 +37,7 @@
 @keyframes glow{
 	0%{
 		filter: hue-rotate(0deg);
-		transform: scale(.8);
+		transform: scale(.7);
 	}
 	100%{
 		filter: hue-rotate(360deg);
@@ -110,6 +110,7 @@
 .downPan.downloads .bottom .type .head{
 	padding: 10px;
 	color: #333;
+	text-transform: capitalize;
 }
 .downPan.downloads .bottom .type .lnk{
 	width: 100%;
@@ -134,14 +135,23 @@
 	color: #555;
 }
 
-.downPan.downloads .bottom .type .lnk > span svg{
+.downPan.downloads .bottom .type .lnk > * svg{
 	width: 20px;
 	fill: #ab5fca;
 }
-.downPan.downloads .bottom .mnLnks .lnk{
-	padding: 8px;
-	background: #fff;
-	border-bottom: 1px solid #aaa;
+.downPan.downloads .otherLink{
+	flex-flow: row wrap;
+}
+.downPan.downloads .bottom .type .otherLink .lnk{
+  margin: 0 6px;
+  height: auto;
+  width: max-content;
+}
+.downPan.downloads .bottom .type .otherLink .lnk a{
+	width: max-content;
+}
+.downPan.downloads .bottom .vidName{
+	margin-bottom: 30px;	
 }
 
 

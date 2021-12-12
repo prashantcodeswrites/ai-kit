@@ -166,6 +166,29 @@
 	opacity: 0;
 	cursor: pointer;
 }
+.banner .bottom .srhPan.loading .srhIcons.downBtn{
+	pointer-events: none;
+}
+.banner .bottom .srhPan.loading .srhIcons.downBtn svg{
+	display: none;
+}
+.banner .bottom .srhPan.loading .srhIcons.downBtn span{/*loader*/
+	width: 32px;
+	height: 32px;
+	border-radius: 32px;
+	background: linear-gradient(#00000040 50%,#000 50%);
+	animation: rot 1s linear infinite;
+}
+.banner .bottom .srhPan.loading .srhIcons.downBtn span::before{/*loader*/
+	width: 29px;
+	height: 29px;border-radius: 50%;
+	background: #fff;
+	content: '';
+}
+
+@keyframes rot{
+	100%{transform: rotate(360deg);}
+}
 .banner .bottom .srhPan > *{
 	height: 40px;
 }

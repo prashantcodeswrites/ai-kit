@@ -47,9 +47,9 @@
     <div class="bottom flex c">
       <p class="texCen" fs=".8em">From Youtube, Facebook & Instagram</p>
       <div class="srhPan flex">
-        <div class="srhIcons flex" ico="search"></div>
+        <label for="link" class="srhIcons flex" ico="search"></label>
         <input type="text" id="link" placeholder="Paste the link here...">
-        <div class="flex srhIcons downBtn" ico="download"></div>
+        <div class="flex srhIcons downBtn" ico="download" id="search" onclick="doSearch();"><span class="flex"></span></div>
       </div>
     </div>
   </div>
@@ -58,35 +58,13 @@
   <div class="downPan "><!-- "downloads" new class -->
 
     <div class="downBox flex c">
-      <div class="top flex c">
+      <div class="top flex c" id="thumbnail">
         <span col="#555" fs="1em">Thumbnail</span>
-        <img src="img/steps/step (2).png">
+        <img>
       </div>
 
-      <div class="bottom flex w100p">
-        <div class="type">
-          <div class="head">Video</div>
-          <div class="lnk flex">
-            <span ico="video"></span>
-            <p class="flex"><span>720p hd</span></p>
-            <span ico="play"></span>
-            <span ico="download"></span>
-          </div>
+      <div class="bottom flex w100p" id="linkPan">
         
-          <div class="lnk flex">
-            <span ico="video"></span>
-            <p class="flex"><span>480p hd</span></p>
-            <span ico="play"></span>
-            <span ico="download"></span>
-          </div>
-        
-          <div class="lnk flex">
-            <span ico="video"></span>
-            <p class="flex"><span>360p hd</span></p>
-            <span ico="play"></span>
-            <span ico="download"></span>
-          </div>
-        </div>
       </div>
     </div>
     <div class="stepBox flex c">

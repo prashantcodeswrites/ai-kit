@@ -25,6 +25,10 @@ body{
   background: #ddd;
   font-family: sans-serif;
 }
+html{ 
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+}
 .forceCenter{ 
   top: 50%;
   left: 50%;
