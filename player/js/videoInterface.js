@@ -51,7 +51,7 @@ for(let a=0; a<params.length; a++){
 	eval(params[a])
 }
 
-try{history.replaceState('/','/','/');}catch{}
+try{history.replaceState('/','/','/player');}catch{}
 
 
 var vidSource={};
