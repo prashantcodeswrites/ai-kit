@@ -1,0 +1,44 @@
+.txtCen{
+	text-align: center;
+}
+button a{
+	text-decoration: none;
+	color: unset;
+}
+.tran{
+	transform: scale(1.2);
+	transition: all ease-in-out .12s;
+}
+.tran.active{
+	transform: scale(1);
+}
+.frw{
+	flex-flow: row wrap;
+}
+
+svg{
+	pointer-events: none;
+	width: 30px;
+	height: 30px;
+}
+span{
+	pointer-events: none;
+}
+html{
+	--allWidth: 100%;
+}
+.body{
+	width: var(--allWidth);
+	width: 100%;
+	min-height: 100vh;
+	background: #d2d5eb;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #333;
+	font-family: Encode Sans SC,sans-serif;
+	justify-content: flex-start;
+}
+.body.dark{
+	background: #111;
+	color: #fff;
+}

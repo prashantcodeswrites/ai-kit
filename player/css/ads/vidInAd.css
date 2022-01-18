@@ -1,0 +1,54 @@
+.vidPan .vidInAds{
+	position: absolute;
+	height: 100%;
+	background: #eee;
+	top: 0;
+	left: 0;
+	display: none;
+	visibility: none;
+}
+.vidPan .vidInAds.active{
+	display: flex;
+	visibility: visible;	
+}
+.vidPan .vidInAds .mnContent{
+	height: 90%;
+	width: 90%;
+	background: #fff;
+	box-shadow: 0 10px 90px #00a3ca66;
+	border-radius: 5px;
+	color: #000;
+}
+.vidPan .vidInAds .mnContent .head{
+	padding: 10px;
+}
+
+.vidPan .vidInAds .mnContent .ads iframe{
+	margin: 15px;
+}
+.vidPan .vidInAds .mnContent .ads ol li{
+	padding: 5px 0;
+}
+
+
+.vidPan .vidInAds .mnContent #adSkiper{
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+	background: #526bff24;
+	color: #000;
+	padding: 10px 20px;
+	pointer-events: none;
+	border-left: 2px solid #526bff;
+}
+.vidPan .vidInAds .mnContent #adSkiper.active{
+	pointer-events: auto;
+}
+@media screen and (max-width: 550px){
+.vidPan .vidInAds .mnContent .head{
+	display: none;
+}
+.vidPan .vidInAds .mnContent .ads iframe{
+	margin: 5px;
+}
+}
