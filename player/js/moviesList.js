@@ -95,7 +95,7 @@ function share(mid,name){
 	}
 }
 function getURI(){
-	return document.URL.split('#')[0];
+	return location.origin;
 }
 function addEvtoLastMv(){
 	lastMovieElem=op(".moviePan:last-of-type");
