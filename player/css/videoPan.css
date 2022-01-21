@@ -49,6 +49,7 @@
 	justify-content: space-between;
 	width: 50px;
 	height: 100%;
+	display: none;
 }
 
 .vidPan{
