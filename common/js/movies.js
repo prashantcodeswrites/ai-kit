@@ -10,7 +10,6 @@ var movies=
 /*['name',`${ms}lnk`,mid,'img', cat],*/
 /*['name',`${ms}lnk`,mid,'img', cat],*/
 
-['Brazen','3fmvFZJ',`${ms}HollyWood/NetFlix/Brazen.2022/Brazen.2022.480p.NF.WeB-Dl.Dual.x264.MSub-DudeFilms.in.mkv`,3],
 ['Chandigarh Kare Aashiqui','3pL0Fr4',`${ms}BollyWood/Chandigarh.Kare.Aashiqui.2021/Chandigarh.Kare.Aashiqui.2021.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
 ["Marvel Eternals","3ERerhS",`${ms}HollyWood/Eternals.2021/Eternals.2021.Hindi.English.480p.WEB-DL.ESub-DudeFilms.in.mkv`,3],
 ['83','3przmmP',`${ms}BollyWood/83.2021.HDCam/83.2021.Hindi.480p.Pre.DVDRip-DudeFilms.in.mkv`,1],
