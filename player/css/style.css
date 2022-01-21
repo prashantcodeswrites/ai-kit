@@ -18,8 +18,8 @@ button a{
 
 svg{
 	pointer-events: none;
-	width: 30px;
-	height: 30px;
+	width: 20px;
+	height: 20px;
 }
 span{
 	pointer-events: none;
@@ -41,4 +41,17 @@ html{
 .body.dark{
 	background: #111;
 	color: #fff;
+}
+.downBtn > div,
+.downBtn > span{
+	display: none;
+}
+.downBtn > .noActive{
+	display: flex;
+}
+.downBtn.exact > .noActive{
+	display: none;
+}
+.downBtn.exact > .active{
+	display: flex;
 }

@@ -40,13 +40,15 @@
 }
 .vidPan .dataBox .currentVideo > *{
 	margin-top: 3px 0;
+	display: inline-block;
 }
 .vidPan .dataBox .currentVideo .name{
 	font-weight: bold;
 }
 .vidPan .dataBox .currentVideo .curData{
-	width: 100%;
 	justify-content: space-between;
+	width: 50px;
+	height: 100%;
 }
 
 .vidPan{

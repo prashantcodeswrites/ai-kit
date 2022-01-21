@@ -30,6 +30,7 @@ function searchCat(){
 		})
 	}
 	resetMvPan();
+	location.assign(`#${category.value}`);
 }
 
 function doSearch(){
@@ -58,7 +59,7 @@ function addMovies(){
 function getSriesHtml(val){
 	var lnkHtml="";
 	for(let i=1; i<=val.links.length; i++){
-		lnkHtml+=`<div class="flex"><span>${i}</span></div>`;
+		lnkHtml+=`<div class="flex" onclick="setMovie('${val.links[i-1]}','${val.name} Episode ${i}')"><span>${i}</span></div>`;
 	}
 	return `<div class="moviePan series flex">
 					<div class="poster w100p">
@@ -83,7 +84,7 @@ function getMvHtml(val){
 					<div class="data flex">
 						<div class="mvActBtn flex" ico="share" onclick="share(${val.mid},'${val.name}')" style="--c: lime" onclick="getShareLink(${val.mid})"></div>
 						<div class="mvActBtn flex" ico="play" style="--c: #ff3000" onclick="setMovie('${val.src}','${val.name}')"></div>
-						<div class="mvActBtn flex" ico="download" style="--c: #ffa700" onclick="checkDownTrue('${val.src}')"></div>
+						<div class="mvActBtn flex" ico="download" style="--c: #ffa700" onclick="checkDownTrue('https://ai-movie-download.netlify.app?lnk=${val.src}')"></div>
 					</div>
 				</div>`;
 }

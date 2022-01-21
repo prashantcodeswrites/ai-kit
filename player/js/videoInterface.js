@@ -51,7 +51,7 @@ for(let a=0; a<params.length; a++){
 	eval(params[a])
 }
 
-try{history.replaceState('/','/','/player/');}catch{}
+try{history.replaceState('/','/','/');}catch{}
 
 
 var vidSource={};
@@ -92,7 +92,7 @@ function importViaLink(){
 }
 
 function setLink(lnk){
-	if(navigator.onLine){
+	if(!navigator.onLine){
 		video.src=lnk;
 		playing=false;
 		video.onprogress=()=>{
@@ -310,7 +310,7 @@ function showLoadingMsg(){
 	clearInterval(msgInterval);
 	msgInterval= setInterval(funXXX,4000)
 	function funXXX(){
-		curVidDataPan.name.innerHTML=msg[num] || msg[4];
+		curVidDataPan.name.innerHTML=((vidSource.name +"<br>") || "")+(msg[num] || msg[4]);
 		curVidDataPan.sizeAndTime.innerHTML=``;
 		num++;
 	}
