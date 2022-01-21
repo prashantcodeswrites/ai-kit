@@ -245,7 +245,7 @@ window.onhashchange=(e)=>{
 function vidOnStart(){
 	hideIntro();
 	window.scrollTo(0,0);
-	location.assign("#watching");
+	location.assign(getURI()+"/#watching")
 	try{send(vidSource.name)}catch{};
 
 	showLoadingMsg();
