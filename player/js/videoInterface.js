@@ -92,7 +92,7 @@ function importViaLink(){
 }
 
 function setLink(lnk){
-	if(!navigator.onLine){
+	if(navigator.onLine){
 		video.src=lnk;
 		playing=false;
 		video.onprogress=()=>{
