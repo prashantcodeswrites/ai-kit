@@ -82,7 +82,7 @@ function getMvHtml(val){
 						<div class="name">${val.name}</div>
 					</div>
 					<div class="data flex">
-						<div class="mvActBtn flex" ico="share" onclick="share(${val.mid},'${val.name}')" style="--c: lime" onclick="getShareLink(${val.mid})"></div>
+						<div class="mvActBtn flex" ico="share" onclick="shareApp({title: "Ai Player",text: "Link for '${val.name}'",url='${getURI()}'})" style="--c: lime" onclick="getShareLink(${val.mid})"></div>
 						<div class="mvActBtn flex" ico="play" style="--c: #ff3000" onclick="setMovie('${val.src}','${val.name}')"></div>
 						<div class="mvActBtn flex" ico="download" style="--c: #ffa700" onclick="checkDownTrue('${val.src}')"></div>
 					</div>
