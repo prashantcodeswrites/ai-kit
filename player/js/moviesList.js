@@ -76,13 +76,18 @@ function getSriesHtml(val){
 }
 
 function getMvHtml(val){
+	var shareData={
+		url: getURI()+`?mid=${val.mid}`,
+		title: val.name,
+		text: "Direct movie link"
+	};
 	return `<div class="moviePan flex">
 					<div class="poster w100p">
 						<img src="${val.img}" alt="${val.name}" loading="lazy" class="w100p">
 						<div class="name">${val.name}</div>
 					</div>
 					<div class="data flex">
-						<div class="mvActBtn flex" ico="share" onclick="shareApp({title: "Ai Player",text: "Link for '${val.name}'",url='${getURI()}'})" style="--c: lime" onclick="getShareLink(${val.mid})"></div>
+						<div class="mvActBtn flex" ico="share" onclick="shareApp(${shareData})" style="--c: lime"></div>
 						<div class="mvActBtn flex" ico="play" style="--c: #ff3000" onclick="setMovie('${val.src}','${val.name}')"></div>
 						<div class="mvActBtn flex" ico="download" style="--c: #ffa700" onclick="checkDownTrue('${val.src}')"></div>
 					</div>
