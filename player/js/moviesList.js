@@ -76,18 +76,13 @@ function getSriesHtml(val){
 }
 
 function getMvHtml(val){
-	var shareData={
-		url: getURI()+`?mid=${val.mid}`,
-		title: val.name,
-		text: "Direct movie link"
-	};
 	return `<div class="moviePan flex">
 					<div class="poster w100p">
 						<img src="${val.img}" alt="${val.name}" loading="lazy" class="w100p">
 						<div class="name">${val.name}</div>
 					</div>
 					<div class="data flex">
-						<div class="mvActBtn flex" ico="share" onclick="shareApp(${shareData})" style="--c: lime"></div>
+						<div class="mvActBtn flex" ico="share" onclick="share(${val.mid})" style="--c: lime"></div>
 						<div class="mvActBtn flex" ico="play" style="--c: #ff3000" onclick="setMovie('${val.src}','${val.name}')"></div>
 						<div class="mvActBtn flex" ico="download" style="--c: #ffa700" onclick="checkDownTrue('${val.src}')"></div>
 					</div>
@@ -95,9 +90,8 @@ function getMvHtml(val){
 }
 
 function share(mid,name){
-	if(copy(getURI()+`?mid=${mid}`)){
-		alert(`Link copied for '${name}'`);
-	}
+	var val=movies[mid];
+	shareApp({url: getURI()+`?mid=${mid}`,title: val.name,text: "Direct movie link"});
 }
 function getURI(){
 	return location.origin;
