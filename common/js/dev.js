@@ -1,5 +1,5 @@
 op("#dev").innerHTML=`<div class="profile flex c">
-      <img src="../common/img/pk.png">
+      <img src="https://ai-kit.netlify.app/common/img/pk.png">
       <div class="links flex">
         <a class="flex" href="https://www.instagram.com/web.dev.priyanshu"><img src="https://ai-kit.netlify.app/common/icons/insta.svg" alt="insta"></a>
         <a class="flex" href="https://www.youtube.com/c/AwesomeCode"><img src="https://ai-kit.netlify.app/common/icons/yt.svg" alt="yt"></a>
