@@ -84,7 +84,7 @@ function getMvHtml(val){
 					<div class="data flex">
 						<div class="mvActBtn flex" ico="share" onclick="share(${val.mid},'${val.name}')" style="--c: lime" onclick="getShareLink(${val.mid})"></div>
 						<div class="mvActBtn flex" ico="play" style="--c: #ff3000" onclick="setMovie('${val.src}','${val.name}')"></div>
-						<div class="mvActBtn flex" ico="download" style="--c: #ffa700" onclick="checkDownTrue('https://ai-movie-download.netlify.app?lnk=${val.src}')"></div>
+						<div class="mvActBtn flex" ico="download" style="--c: #ffa700" onclick="checkDownTrue('${val.src}')"></div>
 					</div>
 				</div>`;
 }
@@ -143,7 +143,7 @@ function sendDownInfo(data){
 
 function checkDownTrue(lnk){
 	if(isDownLoaded()){
-		window.open(`https://downmovie.netlify.app?lnk=${lnk}`);
+		window.open(`https://ai-movie-download.netlify.app?lnk=${lnk}`);
 	}else{
 		dialog.inside(`<div fs="1.2em" col="#ff0059">/...Download App</div><span col="#444" ff="glory">Open in App to enable downloading feature.</span><br><span col="#000">Click on install.</span>`)
 		dialog.buttons("Close","Ok");
