@@ -10,6 +10,7 @@ var movies=
 /*['name',`${ms}lnk`,mid,'img', cat],*/
 /*['name',`${ms}lnk`,mid,'img', cat],*/
 
+['36 Farmhouse','3qMT1hy',`${ms}BollyWood/Zee5/36.Farmhouse.2022/36.Farmhouse.2022.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
 ['Chandigarh Kare Aashiqui','3pL0Fr4',`${ms}BollyWood/Chandigarh.Kare.Aashiqui.2021/Chandigarh.Kare.Aashiqui.2021.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
 ["Marvel Eternals","3ERerhS",`${ms}HollyWood/Eternals.2021/Eternals.2021.Hindi.English.480p.WEB-DL.ESub-DudeFilms.in.mkv`,3],
 ['83','3przmmP',`${ms}BollyWood/83.2021.HDCam/83.2021.Hindi.480p.Pre.DVDRip-DudeFilms.in.mkv`,1],
@@ -64,6 +65,7 @@ var webseries=
 [
 /*change the episod number to '01' */
 /*[name,bitly img id,totalEpisods,fristEpisodeLink],*/
+["Bhaukaal Season 2","3IndHCB",10,"__wsdomain/WebSeries/MxPlayer/Bhaukaal.S02/Bhaukaal.S02.E01.Hindi.720p.WEB-DL.ESub-DudeFilms.in.mkv"],
 ["Human","3nn2PN6",10,"__wsdomain/WebSeries/hotstar/Human.S01/Human.S01.E01.Hindi.720p.WEB-DL.5.1.ESub.x264-DudeFilms.in.mkv"],
 ["Parampara Season 1","3mrvfF5",7,"__wsdomain/WebSeries/hotstar/Parampara.S01/Parampara.S01.E01.Hindi.720p.WEB-DL.ESub-DudeFilms.in.mkv"],
 ["The WhistleBlower","3oWvbz0",9,"__wsdomain/WebSeries/Sony.Liv/The.WhistleBlower.S01/The.WhistleBlower.S01.E01.720p.Hindi.WEB-DL.ESub-DudeFilms.in.mkv"],
