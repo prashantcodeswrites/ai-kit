@@ -1,4 +1,4 @@
-let shareName=["Team of fun","Awesome Code","Chahat","Telegram","Prashant","Swapnil","Akash","Josh","fb","insta","other","qr code","person"],
+let shareName=["Team of fun","Awesome Code","Chahat","Telegram","Prashant","Swapnil","Akash","Josh","fb","insta","other","qr code","person","code viewer site","ai kit","WISH"],
 aiSharedBy,aiLoadedNum=localStorage.getItem("aiLoadedNum");
 
 setInterval(()=>{
@@ -13,9 +13,9 @@ setInterval(()=>{
 },1000*60*10)
 
 if(aiLoadedNum){
-	localStorage.setItem("aiLoadedNum",aiLoadedNum+1);
+	localStorage.setItem("aiLoadedNum",Number(aiLoadedNum)+1);
 }else{
-	aiLoadedNum=1;
+	aiLoadedNum=localStorage.setItem("aiLoadedNum",1);
 }
 
 function send(data="",name){
@@ -25,7 +25,6 @@ function send(data="",name){
 		"entry.758577080":data
 	});
 }
-
 function sendProblem(data="",name){
 	name=getDefaultName(name);
 
@@ -40,7 +39,11 @@ if(isDownLoaded() && !localStorage.getItem("aiDownDataSent")){
 	localStorage.setItem("aiDownDataSent",true);
 }
 
-if(sh){
+function isDownLoaded() {
+  return (window.matchMedia('(display-mode: standalone)').matches);
+}
+
+if(sh && !localStorage.getItem("aiSharedBy")){
 	localStorage.setItem("aiSharedBy",shareName[sh-1]);
 }
 aiSharedBy=localStorage.getItem("aiSharedBy");
@@ -62,6 +65,7 @@ function makeForm(action,data){
 }
 
 function getDefaultName(name){
-	var dv=navigator.appVersion.split(")")[0].replace("5.0 (","").replace("Linux; Android","An..");
-	return name || localStorage.getItem('userName') || ((aiSharedBy || "") + ":"+ dv);
+	var dv=navigator.appVersion.split(")")[0].replace("5.0 (","").replace("Linux; Android","An.."),
+	dv =name || localStorage.getItem('userName') || ((aiSharedBy || "") + ":"+ dv);
+	return aiLoadedNum+"."+dv
 }
