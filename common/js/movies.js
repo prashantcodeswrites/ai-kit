@@ -10,7 +10,6 @@ var movies=
 /*['name',`${ms}lnk`,mid,'img', cat],*/
 /*['name',`${ms}lnk`,mid,'img', cat],*/
 
-['Munich','3FTmlY3',`${ms}HollyWood/NetFlix%20Movies/Munich.The.Edge.Of.War.2022/Munich.The.Edge.Of.War.2022.Hindi.English.480p.WEB-DL.ESub-DudeFilms.in.mkv`,3],	
 ['Churuli','3IAslH3',`${ms}BollyWood/Churuli.2021/Churuli.2021.Hindi.Malayalam.480p.WEB-DL.ESub-DudeFilms.in.mkv`,2],
 ['36 Farmhouse','3qMT1hy',`${ms}BollyWood/Zee5/36.Farmhouse.2022/36.Farmhouse.2022.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
 ['Chandigarh Kare Aashiqui','3pL0Fr4',`${ms}BollyWood/Chandigarh.Kare.Aashiqui.2021/Chandigarh.Kare.Aashiqui.2021.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
@@ -68,7 +67,6 @@ var webseries=
 /*change the episod number to '01' */
 /*[name,bitly img id,totalEpisods,fristEpisodeLink],*/
 ["Unpaused Naya Safar","3FT1vbo",5,"__wsdomain/WebSeries/Amazon.Prime/Unpaused.Naya.Safar.S01/Unpaused.Naya.Safar.S01.E01.Hindi.720p.WEB-DL.ESub-DudeFilms.in.mkv"],
-["Ozark Season 4","340GIFo",7,"__wsdomain/WebSeries/NetFlix/Ozark.S04.P1/Ozark.S04.E01.720p.NF.WEB-DL.x264.Hindi.English.MSub-DudeFilms.in.mkv"],
 ["Bhaukaal Season 2","3IndHCB",10,"__wsdomain/WebSeries/MxPlayer/Bhaukaal.S02/Bhaukaal.S02.E01.Hindi.720p.WEB-DL.ESub-DudeFilms.in.mkv"],
 ["Human","3nn2PN6",10,"__wsdomain/WebSeries/hotstar/Human.S01/Human.S01.E01.Hindi.720p.WEB-DL.5.1.ESub.x264-DudeFilms.in.mkv"],
 ["Parampara Season 1","3mrvfF5",7,"__wsdomain/WebSeries/hotstar/Parampara.S01/Parampara.S01.E01.Hindi.720p.WEB-DL.ESub-DudeFilms.in.mkv"],
