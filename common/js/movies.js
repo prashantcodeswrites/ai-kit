@@ -1,4 +1,4 @@
-var ms="https://dl.abc04.workers.dev/"; 
+var ms="https://dl.gdhub01.workers.dev/0:/"; 
 
 /*
 bollywood=1
