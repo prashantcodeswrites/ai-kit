@@ -3,8 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Download movies or web series</title>
+	<title>Download web series</title>
 </head>
+<style>
+	a{
+		display: block;
+	}
+</style>
 <body>
 	<script>
 		var log=console.log,sh=true;
@@ -12,17 +17,19 @@
 		function opp(e){return document.querySelectorAll(e)}
 
 		var search=location.search;
-		search=search.split("=")[1];
-		if(search){
-			document.body.innerHTML=`If download didn't begin in 10s then <a href="${search}" download>Click</a>`;
-			document.querySelector("a").click();
-		}else{
-			document.body.innerHTML=`Invalid url <button onclick="history.go(-1)">Click</button> to go back.`;
+		search=decodeURI(search.split("=")[1]),
+		data=JSON.parse(search),
+		html="";
+		log(data)
+
+		for(let i=1; i<=data.links.length; i++){
+			html+=`<a href="${data.links[i-1]}">${data.name} Episode ${i}</a>`;
 		}
+		op("body").insertAdjacentHTML("afterbegin",html);
 	</script>
 	<script src="https://ai-kit.netlify.app/player/js/passive/dataSender.js"></script>
 	<script>
-		send("/Down:"+search);
+		send("/Down:"+data.name);
 	</script>
 </body>
 </html>
