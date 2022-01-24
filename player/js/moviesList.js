@@ -48,7 +48,7 @@ function addMovies(){
 	for(var i=alreadyShown; i<=mvNum+alreadyShown; i++){
 		var val=currentToshow[i];
 		if(!val){showMore=false;noMore();break;}
-		htmlxx+=seriesOnly?getSriesHtml(val):getMvHtml(val);
+		htmlxx+=seriesOnly?getSriesHtml(val,i):getMvHtml(val);
 	}
 	alreadyShown=i;
 	listPan.innerHTML+=htmlxx;
@@ -56,7 +56,7 @@ function addMovies(){
 	resetFormat();
 }
 
-function getSriesHtml(val){
+function getSriesHtml(val,sid){
 	var lnkHtml="";
 	for(let i=1; i<=val.links.length; i++){
 		lnkHtml+=`<div class="flex" onclick="setMovie('${val.links[i-1]}','${val.name} Episode ${i}')"><span>${i}</span></div>`;
@@ -67,12 +67,19 @@ function getSriesHtml(val){
 						<div class="name">${val.name}</div>
 					</div>
 					<div class="data flex c">
-						<h2 fs="1.1em" col="#888">Episodes</h2>
+						<p fs="1.1em" col="#444">Episodes</p>
+						<div class="downSr" ico="download" bg="#ffa700" style="fill: #fff; padding: 5px 7px; cursor: pointer; border-radius: 2px;" onclick="downSeries(${sid})"></div>
 						<div class="eps flex">
 							${lnkHtml}
 						</div>
 					</div>
 				</div>`;
+}
+function downSeries(sid){
+	let val=webseries[sid],
+	objx={name: val.name, links: val.links},
+	allLnk="https://ai-movie-download.netlify.app/series.html?lnk="+JSON.stringify(objx);
+	checkDownTrue(allLnk);
 }
 
 function getMvHtml(val){
@@ -84,7 +91,7 @@ function getMvHtml(val){
 					<div class="data flex">
 						<div class="mvActBtn flex" ico="share" onclick="share(${val.mid})" style="--c: lime"></div>
 						<div class="mvActBtn flex" ico="play" style="--c: #ff3000" onclick="setMovie('${val.src}','${val.name}')"></div>
-						<div class="mvActBtn flex" ico="download" style="--c: #ffa700" onclick="checkDownTrue('${val.src}')"></div>
+						<div class="mvActBtn flex" ico="download" style="--c: #ffa700" onclick="checkDownTrue('https://ai-movie-download.netlify.app?lnk=${val.src}')"></div>
 					</div>
 				</div>`;
 }
@@ -142,7 +149,7 @@ function sendDownInfo(data){
 
 function checkDownTrue(lnk){
 	if(isDownLoaded()){
-		window.open(`https://ai-movie-download.netlify.app?lnk=${lnk}`);
+		window.open(lnk);
 	}else{
 		dialog.inside(`<div fs="1.2em" col="#ff0059">/...Download App</div><span col="#444" ff="glory">Open in App to enable downloading feature.</span><br><span col="#000">Click on install.</span>`)
 		dialog.buttons("Close","Ok");
