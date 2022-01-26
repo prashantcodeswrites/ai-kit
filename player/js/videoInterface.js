@@ -70,10 +70,11 @@ else if(mid){
 localStorage.removeItem("aiCurVid");
 
 
-function setMovie(lnk,name){
+function setMovie(lnk,name,midx=false){
 	vidSource={
 		name,
-		src: lnk
+		src: lnk,
+		mid: midx
 	}
 
 	load.show();
@@ -93,7 +94,13 @@ function setMovie(lnk,name){
 	curVidDataPan.elem.insertAdjacentHTML("beforeend",elem);
 }
 function shareCurent(){
-	shareApp({title: vidSource.name,text: `Direct link for ${vidSource.name}`, url:vidSource.src})
+	let midx=video.getAttribute("mid"),lnkx;
+	if(midx){
+		lnkx=`https://ai-player.netlify.app?mid=${midx}`;
+	}else{
+		lnkx=`https://ai-player.netlify.app?mlnk='${video.src}'`;
+	}
+	shareApp({title: vidSource.name,text: `Direct link for ${vidSource.name}`, url:lnkx})
 }
 
 function importViaLink(){
@@ -106,9 +113,12 @@ function importViaLink(){
 }
 
 function setLink(lnk){
-	if(navigator.onLine){
+	if(!navigator.onLine){
 		video.src=lnk;
 		playing=false;
+		if(vidSource.mid){video.setAttribute("mid",vidSource.mid)}else{
+			video.removeAttribute("mid");
+		}	
 		video.onprogress=()=>{
 			if(!playing){
 				playPause();
