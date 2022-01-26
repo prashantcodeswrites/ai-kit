@@ -113,7 +113,7 @@ function importViaLink(){
 }
 
 function setLink(lnk){
-	if(!navigator.onLine){
+	if(navigator.onLine){
 		video.src=lnk;
 		playing=false;
 		if(vidSource.mid){video.setAttribute("mid",vidSource.mid)}else{
