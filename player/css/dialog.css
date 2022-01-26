@@ -37,6 +37,7 @@
 	font-size: 1em;
 	font-family: glory;
 	padding: 10px;
+	color: #555;
 }
 .dg .btp button.yes{
 	/*background: #0099ff;*/
@@ -51,4 +52,5 @@
 	margin-top: 10px;
 	border-left: 1px solid #666;
 	border-radius: 1px;
+	color: #333;
 }
