@@ -1,9 +1,6 @@
 /*this page is to give the user experience to see which movie is to be watched*/
 
 /*dom elements variables*/
-function send(){log("sending")}
-function sendProblem(){log("sending prolglem")}
-
 var filesIn=op('#files'),
 curVidDataPan={
 	elem: op(".dataBox .currentVideo"),
@@ -45,7 +42,6 @@ video.onerror=(e)=>{
 var mid=undefined,mlnk,sh,ws,mname;
 var params=decodeURI(location.search.replace("?",''));
 params=params.split('&');
-log(params);
 for(let a=0; a<params.length; a++){
 	eval(params[a])
 }
@@ -83,7 +79,6 @@ function setMovie(lnk,name,midx=false){
 
 	/*TO MAKE THE DOWNLOAD AND SHARE BUTTON WHILE VIDEO*/
 	var elem="";
-	log("came htt")
 	try{op(".currentVideo .curData").remove()}catch{}
 	if(video.src.startsWith("http")){
 		elem=`<div class="curData flex">
@@ -91,7 +86,8 @@ function setMovie(lnk,name,midx=false){
 					<div class="flex" ico="share" onclick="shareCurent()" bg="lime" ></div>
 				</div>`;
 	}
-	curVidDataPan.elem.insertAdjacentHTML("beforeend",elem);
+	curVidDataPan.elem.insertAdjacentHTML("beforeend",elem)
+	resetFormat();
 }
 function shareCurent(){
 	let midx=video.getAttribute("mid"),lnkx;
@@ -283,7 +279,6 @@ function vidOnStart(){
 }
 
 function stopPlaying(){/*to stop the video forcefully*/
-	log('I sttoped')
 	vidSource={},
 	timeChInterval,
 	vidDuration,
