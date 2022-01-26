@@ -57,7 +57,7 @@ var vidSource={};
 
 if(mlnk){
 	mlnk=mlnk.replaceAll("~~","&");
-	setLink(mlnk);
+	setMovie(mlnk,"Direct Link");
 }
 else if(mid){
 	var val=movies[mid];
