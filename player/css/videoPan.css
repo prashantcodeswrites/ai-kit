@@ -36,22 +36,29 @@
 	text-transform: capitalize;
 }
 .vidPan .dataBox .currentVideo.active{
-	display: block;
+	display: flex;
+	justify-content: space-between
 }
 .vidPan .dataBox .currentVideo > *{
 	margin-top: 3px 0;
-	display: inline-block;
+	/*! display: inline-block; */
 }
 .vidPan .dataBox .currentVideo .name{
 	font-weight: bold;
 }
 .vidPan .dataBox .currentVideo .curData{
-	justify-content: space-between;
-	width: 50px;
+	width: 80px;
 	height: 100%;
-	display: none;
 }
 
+.vidPan .dataBox .currentVideo .curData> div{
+	border-radius: 2px;
+	fill: #fff;
+	background: lime;
+	width: 30px;height: 30px;
+	margin: 0 5px;
+	cursor: pointer;
+}
 .vidPan{
 	width: var(--allWidth);
 }

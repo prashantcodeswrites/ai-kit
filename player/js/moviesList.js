@@ -146,9 +146,9 @@ function copy(txt) {
 function sendDownInfo(data){
 	try{send("DOWN:"+data)}catch{}
 }
-
 function checkDownTrue(lnk){
 	if(isDownLoaded()){
+		saveDownData();
 		window.open(lnk);
 	}else{
 		dialog.inside(`<div fs="1.2em" col="#ff0059">/...Download App</div><span col="#444" ff="glory">Open in App to enable downloading feature.</span><br><span col="#000">Click on install.</span>`)

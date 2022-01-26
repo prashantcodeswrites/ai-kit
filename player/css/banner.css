@@ -1,7 +1,7 @@
 .mainBnr{
   margin-bottom: 340px;
-  background: linear-gradient(45deg,#ae60cb,#6642cb);
-  height: 300px;
+  background: linear-gradient(#ff6000,white,#0aff0a);
+  height: 540px;
   justify-content: flex-start;
   display: none;
 }
@@ -10,6 +10,17 @@
 }
 .banner .top{
   width: 100%;
+}
+.banner .lined{
+  margin: 5px 0;
+}
+.banner .top img{
+  max-width: 350px;
+  width: 90vw;
+  object-fit: cover;
+  height: 200px;
+  margin: 10px;
+  border-radius: 3px;
 }
 .banner .bottom{
   justify-content: flex-start;
@@ -60,7 +71,10 @@
 .banner .bottom .apDown i:nth-of-type(2){
   left: 90px;
 }
-
+#deviceFile.active{
+  background: lime;
+  color: #333;
+}
 .banner .bottom .bnrBtn button {
   background: #fffd;
   border: none;

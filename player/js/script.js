@@ -368,9 +368,6 @@ function addHTML(parent,htm,where){
 	parent.insertAdjacentHTML(where?where:"afterbegin",htm);
 }
 
-function op(e){return document.querySelector(e)}
-function opp(e){return document.querySelectorAll(e)}
-
 function is_touch_enabled() {
 return ('ontouchstart' in window) ||
 (navigator.maxTouchPoints > 0) ||

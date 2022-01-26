@@ -7,8 +7,7 @@ function sendProblem(){log("sending prolglem")}
 var filesIn=op('#files'),
 curVidDataPan={
 	elem: op(".dataBox .currentVideo"),
-	name: op(".currentVideo .name"),
-	sizeAndTime: op(".currentVideo .left")
+	name: op(".currentVideo .name")
 };
 
 var vidSource=null,
@@ -80,6 +79,21 @@ function setMovie(lnk,name){
 	load.show();
 	setLink(vidSource.src);
 	window.scrollTo(0,0);
+
+	/*TO MAKE THE DOWNLOAD AND SHARE BUTTON WHILE VIDEO*/
+	var elem="";
+	log("came htt")
+	try{op(".currentVideo .curData").remove()}catch{}
+	if(video.src.startsWith("http")){
+		elem=`<div class="curData flex">
+					<div class="flex" ico="download" onclick="checkDownTrue('${video.src}')" bg="#ffa700"></div>
+					<div class="flex" ico="share" onclick="shareCurent()" bg="lime" ></div>
+				</div>`;
+	}
+	curVidDataPan.elem.insertAdjacentHTML("beforeend",elem);
+}
+function shareCurent(){
+	shareApp({title: vidSource.name,text: `Direct link for ${vidSource.name}`, url:vidSource.src})
 }
 
 function importViaLink(){
@@ -311,7 +325,6 @@ function showLoadingMsg(){
 	msgInterval= setInterval(funXXX,4000)
 	function funXXX(){
 		curVidDataPan.name.innerHTML=((vidSource.name +"<br>") || "")+(msg[num] || msg[4]);
-		curVidDataPan.sizeAndTime.innerHTML=``;
 		num++;
 	}
 }
@@ -319,4 +332,27 @@ function showLoadingMsg(){
 video.onended=()=>{
 	clearInterval(videoStoringInterval);
 	localStorage.removeItem("aiCurVid");
+}
+
+function checkDownload(){
+	if(localStorage.getItem("downloadedSomething")){
+		op("#deviceFile").classList.add("active");
+		dialog.inside("You may watch the downloed videos only in this app.");
+		dialog.success=()=>{
+			getViaDevice();
+		}
+		dialog.buttons("Not now","Open");
+		dialog.show();
+		saveDownData("remove");
+	}
+}
+checkDownload();
+
+function saveDownData(kind="set"){
+	if(kind=="set"){
+		localStorage.setItem("downloadedSomething",true);
+		localStorage.setItem("downloadExperience",Number(localStorage.getItem("downloadExperience"))+1)
+	}else{
+		localStorage.removeItem("downloadedSomething");
+	}
 }
