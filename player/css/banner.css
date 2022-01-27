@@ -1,7 +1,6 @@
 .mainBnr{
   margin-bottom: 340px;
-  background: linear-gradient(#ff6000,white,#0aff0a);
-  height: 540px;
+  height: 300px;
   justify-content: flex-start;
   display: none;
 }
