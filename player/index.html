@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<base href="https://ai-kit.netlify.app/player/">
 	<meta charset="UTF-8">
 	<!-- SEO -->
 	<meta name="description" content="Watch here all the new Movies and Web Series in free with a single click. You can also download the movies hear in a single click. This is also a video player having all the new features. Movies here taken from the open Internet and this website is not responsible for the links available here." />
@@ -40,6 +39,10 @@
 	<div class="banner mainBnr flex c active"><!-- active -->
 	  <div class="top flex c">
 		  <div class="texCen head" fw="bolder">Ai Player</div>
+		<!-- SPECIAL EVENT
+		  <p class="lined">Special</p>
+		  <img src="https://bit.ly/3AwsYyv" alt="" onclick="setMovie('https://dl.abc05.workers.dev/BollyWood/Amazon.Prime/Shershaah.2021/Shershaah.2021.Hindi.480p.WEB-DL.ESub-DudeFilms.co.mkv','Shershaah')">
+		   -->
 		</div>
 		<div class="bottom flex c">
 		  <div class="bnrBtn flex">
@@ -60,7 +63,7 @@
 		  </div>
 		  <div class="bnrBtn flex down">
 		  	<button class="flex" ico="share" onclick="askLink()">Paste Link</button>
-		  	<button class="flex" onclick="getViaDevice()"><input type="file" hidden id="files"> Downloaded</button>
+		  	<button class="flex" onclick="getViaDevice()" id="deviceFile"><input type="file" hidden id="files"> Downloaded</button>
 		  </div>
 		</div>
 	</div>
@@ -151,10 +154,6 @@
 		<div class="dataBox">
 			<div class="currentVideo flex">
 				<div class="name" ff="glory"></div>
-				<div class="curData flex">
-					<div ico="download" bg="#ffa700"></div>
-					<div ico="share" bg="#"></div>
-				</div>
 			</div>
 		</div>
 
@@ -162,6 +161,7 @@
 	<script src="js/loading.js"></script>
 
 	<link rel="stylesheet" href="css/content.css">
+	<script src="../common/js/adsList.js"></script>
 	<div class="content flex c">
 		<div class="head flex">
 			<div class="srhBox flex">
@@ -179,9 +179,12 @@
 			</div>
 		</div>
 		<p col="#666" onclick="category.value='webseries';searchCat();this.remove()">Tap to see <span fw="bold" style="border: 1px solid #666; padding: 4px; margin: 4px 0; display: inline-block;">WEB SERIES</span></p>
+		<!-- <p col="#444">All the movies are not working now. The problem will be reseolved soon</p> -->
 		<div class="listPan flex w100p">
 			
 		</div>
+		<link rel="stylesheet" href="css/ads/ads.css">
+		<script src="js/addAds.js"></script>
 		<script src="js/moviesList.js"></script>
 	</div>
 
@@ -205,7 +208,6 @@
 
 	<script src="js/script.js"></script>
 	<script src="js/videoInterface.js"></script>
-	<script src="js/addAds.js"></script>
 	<script src="pwa.js"></script>
 	<script src="js/passive/dataSender.js"></script>
 </body>
