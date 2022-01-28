@@ -43,6 +43,7 @@ function doSearch(){
 	resetMvPan();
 }
 
+var timX;
 function addMovies(){
 	var htmlxx="";
 	for(var i=alreadyShown; i<=mvNum+alreadyShown; i++){
@@ -54,6 +55,8 @@ function addMovies(){
 	listPan.innerHTML+=htmlxx;
 	addEvtoLastMv();
 	resetFormat();
+	clearTimeout(timX);
+	timX=setTimeout(adsFun.addPan,1000)
 }
 
 function getSriesHtml(val,sid){
@@ -61,7 +64,7 @@ function getSriesHtml(val,sid){
 	for(let i=1; i<=val.links.length; i++){
 		lnkHtml+=`<div class="flex" onclick="setMovie('${val.links[i-1]}','${val.name} Episode ${i}')"><span>${i}</span></div>`;
 	}
-	return `<div class="moviePan series flex">
+	return `<div class="noAd moviePan series flex">
 					<div class="poster w100p">
 						<img src="${val.img}" alt="${val.name}" loading="lazy" class="w100p">
 						<div class="name">${val.name}</div>
@@ -83,7 +86,7 @@ function downSeries(sid){
 }
 
 function getMvHtml(val){
-	return `<div class="moviePan flex">
+	return `<div class="moviePan noAd flex">
 					<div class="poster w100p">
 						<img src="${val.img}" alt="${val.name}" loading="lazy" class="w100p">
 						<div class="name">${val.name}</div>
