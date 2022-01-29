@@ -76,7 +76,7 @@ priType.push(...type);
 
 for(let val of priType){
 	var aryx=adsList[val].map(v=>{
-		return [`<iframe onclick="setChoice('${adAry[i][1]}');" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=priyanshu002b-21&language=en_IN&marketplace=amazon&region=IN&placement=${v}&show_border=true&link_opens_in_new_window=true"></iframe>`,val]
+		return [`<iframe onclick="setChoice('${val}');" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=priyanshu002b-21&language=en_IN&marketplace=amazon&region=IN&placement=${v}&show_border=true&link_opens_in_new_window=true"></iframe>`,val]
 	});
 	adAry.push(...aryx);
 }
