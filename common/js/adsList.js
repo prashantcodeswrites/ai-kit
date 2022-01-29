@@ -1,5 +1,5 @@
-
-var adsList=
+var suffle=false,
+adsList=
 {
 gadgets:[
 `B08L5FM4JC&asins=B08L5FM4JC&linkId=a4cf5cd793c01c3e48e082a2e9626de1`,
@@ -22,7 +22,6 @@ hoodie:[
 `B091J1ZK77&asins=B091J1ZK77&linkId=8867cc870acf384bbe534d7d42b82d24`,
 `B08XKGRCC1&asins=B08XKGRCC1&linkId=cbafd18749e897f324a612c6e4c4c3f4`,
 `B08BLQKSJZ&asins=B08BLQKSJZ&linkId=8d2383b7f51e67b9ab8ac3fb1c440a74`,
-`B08JM7TGK8&asins=B08JM7TGK8&linkId=6b79f0a4ab81f61e09aad7beefde543c`,
 ],
 earphones:[
 `B09JCFSD4Z&asins=B09JCFSD4Z&linkId=424f4242d888c2d41cf795bdd2c619d3`,
@@ -33,7 +32,6 @@ earphones:[
 free_fire:[
 `B09HL5R4SG&asins=B09HL5R4SG&linkId=85cdd31243189ef82bb0de1d1e1c8629`,
 `B09LR11YBK&asins=B09LR11YBK&linkId=8584d44c6c4fb40422f8f282bd666f06`,
-`B08DLZYNWY&asins=B08DLZYNWY&linkId=4b2109db4dcf16f16d3b0660e4e546bd`,
 ],
 watches:[
 `B08GSRCGRG&asins=B08GSRCGRG&linkId=7603316b9b3ec422a78b7b6068657550`,
@@ -66,7 +64,7 @@ for(let val in adsList){
 
 log(type)
 
-if(adChoice.fav){
+if(adChoice.fav && suffle==true){
 	for(let val of adChoice.fav){
 		if(adsList[val]){
 			priType.push(...type.splice(type.indexOf(val)-1,3));
