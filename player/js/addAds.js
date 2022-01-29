@@ -3,7 +3,7 @@ function getAds(){
 	var numToShow=Math.floor(listPan.offsetWidth/130),
 	htmlx="";
 	for(let i=numShown; i<(numShown+numToShow); i++){
-		htmlx+=`<div class="adBox" onclick="setChoice('${adAry[i][1]}');this.children[0].click();">${adAry[i][0]}</div>`;
+		htmlx+=`<div class="adBox">${adAry[i][0]}</div>`;
 		if(i+1>=adAry.length){numShown=0}
 	}
 	numShown+=numToShow;
