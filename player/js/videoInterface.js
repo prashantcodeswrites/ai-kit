@@ -293,7 +293,7 @@ function stopPlaying(){/*to stop the video forcefully*/
 	vidPan.classList.remove("active");
 	curVidDataPan.elem.classList.remove("active")
 	video.src='';
-	try{ads.close();}catch{}
+	// try{ads.close();}catch{}
 }
 
 /*screen rotate for get full screen*/
