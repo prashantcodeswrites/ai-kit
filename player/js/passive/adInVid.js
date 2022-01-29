@@ -40,7 +40,7 @@ ads={
 		space=Math.floor(video.offsetWidth * 90/100);
 		for(let i=0; i< space; i+=250){
 			let amalnk=ads.adsList.splice(Math.floor(Math.random()*(ads.adsList.length)),1)[0];
-			html+=amalnk;
+			html+=amalnk[0];
 		}
 		html+="</div>";
 		return html;
