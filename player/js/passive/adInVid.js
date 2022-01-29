@@ -40,7 +40,7 @@ ads={
 		space=Math.floor(video.offsetWidth * 90/100);
 		for(let i=0; i< space; i+=250){
 			let amalnk=ads.adsList.splice(Math.floor(Math.random()*(ads.adsList.length)),1)[0];
-			html+=getProduct(amalnk);
+			html+=amalnk;
 		}
 		html+="</div>";
 		return html;
@@ -62,7 +62,3 @@ ads={
 		intxx=setInterval(funxx,1000);
 	}
 };
-
-function getProduct(lnk){
-	return lnk? `<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=priyanshu002b-21&language=en_IN&marketplace=amazon&region=IN&placement=${lnk}&show_border=true&link_opens_in_new_window=true"></iframe>`: "";
-}
