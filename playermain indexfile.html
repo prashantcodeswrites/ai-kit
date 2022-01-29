@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- SEO -->
+	<meta name="description" content="Watch here all the new Movies and Web Series in free with a single click. You can also download the movies hear in a single click. This is also a video player having all the new features. Movies here taken from the open Internet and this website is not responsible for the links available here." />
+	<meta name="keywords" content="ai player, priyanshu, free new movies, index of movies, index of web series, download new movies">
+  <meta name="author" content="Priyanshu Kumar">
+
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ai Player : Free Movies and  Webseries</title>
+	<meta name="theme-color" content="#222">
+	<link rel="manifest" href="manifest.json">
+	<link rel="shortcut icon" href="logo/logo.ico" type="image/x-icon">
+
+	<!-- common stylesheets -->
+	<link rel="stylesheet" href="https://ai-kit.netlify.app/common/css/style.css">
+	<link rel="stylesheet" href="https://ai-kit.netlify.app/common/css/layout.css">
+	<link rel="stylesheet" href="https://ai-kit.netlify.app/common/css/dev.css">
+	<link rel="stylesheet" href="https://ai-kit.netlify.app/home/css/banner.css">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/banner.css">
+
+	<script src="https://ai-kit.netlify.app/common/js/variables.js"></script>
+	<script src="https://ai-kit.netlify.app/common/js/script.js"></script>
+	<script src="https://ai-kit.netlify.app/common/js/movies.js"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Glory:wght@400&family=Encode+Sans+SC&display=swap" rel="stylesheet">
+	
+</head>
+<style>
+
+</style>
+<body class="body flex c">
+
+	<div class="banner mainBnr flex c active"><!-- active -->
+	  <div class="top flex c">
+		  <div class="texCen head" fw="bolder">Ai Player</div>
+		<!-- SPECIAL EVENT
+		  <p class="lined">Special</p>
+		  <img src="https://bit.ly/3AwsYyv" alt="" onclick="setMovie('https://dl.abc05.workers.dev/BollyWood/Amazon.Prime/Shershaah.2021/Shershaah.2021.Hindi.480p.WEB-DL.ESub-DudeFilms.co.mkv','Shershaah')">
+		   -->
+		</div>
+		<div class="bottom flex c">
+		  <div class="bnrBtn flex">
+		  	<button class="downBtn flex"><span ico="download" class="active">Download</span><span class="noActive">Share</span></button>
+		  	<button class="flex" ico="search" onclick="op('#search').focus()">Search</button>
+		  </div>
+		  <div class="posPan flex"></div>
+		  <div class="apDown flex c downBtn">
+		  	<i></i><i></i>
+		  	<div class="active flex c">
+			  	<span fs=".6em" col="#f00">DOWNLOAD</span>
+			  	<span fs="1em" col="rgb(255, 96, 0)" fw="bold">APP</span>
+		  	</div>
+		  	<div class="flex c noActive">
+			  	<span fs=".6em" col="#f00">SHARE</span>
+			  	<span fs="1em" col="rgb(255, 96, 0)" fw="bold">APP</span>
+		  	</div>
+		  </div>
+		  <div class="bnrBtn flex down">
+		  	<button class="flex" ico="share" onclick="askLink()">Paste Link</button>
+		  	<button class="flex" onclick="getViaDevice()" id="deviceFile"><input type="file" hidden id="files"> Downloaded</button>
+		  </div>
+		</div>
+	</div>
+	<script src="js/makeBnr.js"></script>
+
+	<link rel="stylesheet" href="css/videoPan.css">
+	<link rel="stylesheet" href="css/ads/vidInAd.css">
+	<link rel="stylesheet" type="text/css" href="css/loader.css">
+	<div class="vidPan flex c"><!-- active -->
+		<div class="videoBox flex c">
+			<video width="100%"></video>
+			
+			<div class="controls tran">
+				<div class="top flex">
+					<div class="fr l" forWhat='brightness' skipTime=" - 5"></div>
+					<div class="fr r" forWhat='sound' skipTime=" + 5"></div>
+
+					<div class="flex center flex">
+						<div class="d flex d1" id="prevBtn" title="Previous" onclick="video.currentTime-=5"></div>
+						<div class="d flex d2" id="playBtn" title="Play/Pause"></div>
+						<div class="d flex d3" id="nextBtn" title="Next" onclick="video.currentTime+=5"></div>
+					</div>
+
+					<div class="speedPan flex">
+						<div class="speedIco" fs="1.2em" title="speed" id="speedIco"></div>
+						<div class="speedIco" fs="1.2em" title="speed" onclick="quality.showOptions()" id="qualityIco"></div>
+					</div>
+				</div>
+
+				<div class="bottom flex c" forWhat="duration">
+					<div class="vidDataPan flex">
+						<div class="timePan">
+							<div class="time">
+								<span id="playTime" col="#55a9ff" fs="1.1em">00:00</span><span id="totalTime" col="#fff" fs=".8em">/00:00</span>
+							</div>								
+						</div>
+
+						<div class="fullScrPan flex">
+							<div class="flex">
+							</div>
+						</div>
+					</div>
+
+					<div class="linePan" forWhat=duration>
+						<div class="line">
+							<div class="filled"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="controlToggler"></div>
+			</div>
+
+			<div class="loader flex">
+		    <div class="out"></div>
+		    <div class="mid"></div>
+		    <div class="in"></div>
+		  </div>
+
+			<div class="speedChPan flex" forWhat="speed">
+				<div class="topBtn flex">
+					<div class="rBtn flex" onclick="alterSpeed(`-5`)"><span>-</span></div>
+					<div class="btn" onclick="resetSpeed()">RESET</div>
+					<div class="rBtn flex" onclick="alterSpeed(`+5`)"><span>+</span></div>
+				</div>
+				<div class="speedLine flex">
+					<div class="filledLine"></div>
+					<div class="dots"></div><div class="dots"></div><div class="dots"></div><div class="dots"></div><div class="dots"></div>
+				</div>
+			</div>
+
+			<div class="messBox flex"><span>x</span>100%</div>
+
+			<div class="qualityBox" id="qlBox">
+				<div class="head" ff="Encode Sans SC" col="#e73070">Choose video quality</div>
+				<div class="options" id="qlOpt"></div>
+			</div>
+
+			<div class="flex vidInAds w100p">
+				<div class="mnContent">
+					<div class="head"></div>				
+					<div class="ads flex"></div>
+					<div id="adSkiper" onclick="ads.hideAdInVid()">Skip Ad</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="dataBox">
+			<div class="currentVideo flex">
+				<div class="name" ff="glory"></div>
+			</div>
+		</div>
+
+	</div>
+	<script src="js/loading.js"></script>
+
+	<link rel="stylesheet" href="css/content.css">
+	<script src="https://ai-kit.netlify.app/common/js/adsList.js"></script>
+	<div class="content flex c">
+		<div class="head flex">
+			<div class="srhBox flex">
+				<input placeholder="Search here..." class="noBtn" oninput="doSearch()" id="search">
+				<div class="s flex" ico="search"></div>
+			</div>
+			<div class="catBox">
+				<select id="category" class="noBtn" onchange="searchCat()">
+					<option value="0">Movies</option>
+					<option value="1">Bollywood</option>
+					<option value="3">English Movies</option>
+					<option value="2">South Indian</option>
+					<option value="webseries">Webseries</option>
+				</select>
+			</div>
+		</div>
+		<p col="#666" onclick="category.value='webseries';searchCat();this.remove()">Tap to see <span fw="bold" style="border: 1px solid #666; padding: 4px; margin: 4px 0; display: inline-block;">WEB SERIES</span></p>
+		<!-- <p col="#444">All the movies are not working now. The problem will be reseolved soon</p> -->
+		<div class="listPan flex w100p">
+			
+		</div>
+		<link rel="stylesheet" href="css/ads/ads.css">
+		<script src="js/addAds.js"></script>
+		<script src="js/moviesList.js"></script>
+		<script src="js/passive/adInVid.js"></script>
+	</div>
+
+  <div class="dev flex" id="dev">
+    <link rel="stylesheet" href="https://ai-kit.netlify.app/common/css/dev.css">
+    <script src="https://ai-kit.netlify.app/common/js/dev.js"></script>
+  </div>
+
+
+ 	<link rel="stylesheet" href="css/dialog.css">
+	<div class="dgBx flex" onclick="dialog.hide();">
+		<div class="dg">
+			<p></p>
+			<div class="btp flex">
+				<button class="flex" onclick="dialog.hide();"><span>No</span></button>
+				<button class="flex yes" onclick="dialog.hide();dialog.success()"><span>Yes</span></button>
+			</div>
+		</div>
+	</div>
+	<script src="js/dialog.js"></script>
+
+	<script src="js/script.js"></script>
+	<script src="js/videoInterface.js"></script>
+	<script src="pwa.js"></script>
+	<script src="js/passive/dataSender.js"></script>
+</body>
+</html>
