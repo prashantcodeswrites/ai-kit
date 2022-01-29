@@ -1,4 +1,4 @@
-var ms="https://dl.gdhub01.workers.dev/0:/"; 
+var ms="https://dl.abc05.workers.dev/"; 
 
 /*
 bollywood=1
@@ -9,7 +9,8 @@ var movies=
 [
 /*['name',`${ms}lnk`,mid,'img', cat],*/
 /*['name',`${ms}lnk`,mid,'img', cat],*/
-
+['Spider-Man No Way Home','30wVbaR',`${ms}HollyWood/Spider-Man.No.Way.Home.2021.HDTV/Spider-Man.No.Way.Home.2021.480p.HDTC.HINDI.DUB-DudeFilms.in.mkv`,3],
+['The Kapil: Im not done...','3g49h7P',`${ms}TV.Show/Kapil.Sharma.Im.Not.Done.Yet.2022/Kapil.Sharma.Im.Not.Done.Yet.2022.480p.NF.WEB-DL.DDP5.1.x264-DudeFilms.in.mkv`,1],
 ['Churuli','3IAslH3',`${ms}BollyWood/Churuli.2021/Churuli.2021.Hindi.Malayalam.480p.WEB-DL.ESub-DudeFilms.in.mkv`,2],
 ['36 Farmhouse','3qMT1hy',`${ms}BollyWood/Zee5/36.Farmhouse.2022/36.Farmhouse.2022.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
 ['Chandigarh Kare Aashiqui','3pL0Fr4',`${ms}BollyWood/Chandigarh.Kare.Aashiqui.2021/Chandigarh.Kare.Aashiqui.2021.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
@@ -33,7 +34,6 @@ var movies=
 ['Shock Wave','3es8E6V', `${ms}HollyWood/Shock.Wave.2.2020/Shock.Wave.2.2020.Hindi.Chinese.480p.BluRay.ESub-DudeFilms.in.mkv`,3],
 ['420 IPC','3p3mBhT',`${ms}BollyWood/Zee5/420.IPC.2021/420.IPC.2021.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
 ['Marakkar Arab Sagar','3IWOY9s',`${ms}South.Movies/Marakkar.Arab.Sagar.Ka.Sher.2021/Marakkar.Arab.Sagar.Ka.Sher.2021.Hindi.Malayalam.480p.WEB-DL.ESub-DudeFilms.in.mkv`,2],
-['Spider-Man No Way Home','30wVbaR',`${ms}HollyWood/Spider-Man.No.Way.Home.2021.CamRip/Spider.Man.No.Way.Home.2021.Hindi.English.480p.CAMRip-DudeFilms.in.mkv`,3],
 ['Kurup','30xggSp',`${ms}South.Movies/Kurup.2021/Kurup.2021.480p.WEB-DL.Hindi.DD5.1-Malayalam.ESub.x264-DudeFilms.in.mkv`,2],
 ['Tadap','32SRNYt',`${ms}BollyWood/Tadap.2021.HDcam/Tadap.2021.Hindi.480p.HQ.PreDVD.Rip.x264.AAC-DudeFilms.in.mkv`,1],
 ['Bom Biswas','3IfgpLj',`${ms}BollyWood/Zee5/Bob.Biswas.2021/Bob.Biswas.2021.480p.ZEE5.WEB-DL.Esub-DudeFilms.in.mkv`,1],
@@ -66,6 +66,7 @@ var webseries=
 [
 /*change the episod number to '01' */
 /*[name,bitly img id,totalEpisods,fristEpisodeLink],*/
+["All of Us are DAEd","35oVTc8",12,"__wsdomain/WebSeries/NetFlix/All.Of.Us.Are.Dead.S01/All.Of.Us.Are.Dead.S01.E01.Hindi-English-Korean.720p.(10bit).WEB-DL.ESub-DudeFilms.in.mkv"],
 ["Unpaused Naya Safar","3FT1vbo",5,"__wsdomain/WebSeries/Amazon.Prime/Unpaused.Naya.Safar.S01/Unpaused.Naya.Safar.S01.E01.Hindi.720p.WEB-DL.ESub-DudeFilms.in.mkv"],
 ["Bhaukaal Season 2","3IndHCB",10,"__wsdomain/WebSeries/MxPlayer/Bhaukaal.S02/Bhaukaal.S02.E01.Hindi.720p.WEB-DL.ESub-DudeFilms.in.mkv"],
 ["Human","3nn2PN6",10,"__wsdomain/WebSeries/hotstar/Human.S01/Human.S01.E01.Hindi.720p.WEB-DL.5.1.ESub.x264-DudeFilms.in.mkv"],
