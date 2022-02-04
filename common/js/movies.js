@@ -1,4 +1,4 @@
-var ms="https://dl.abc05.workers.dev/"; 
+var ms="https://dl.gdhub02.workers.dev/0:/"; 
 
 /*
 bollywood=1
@@ -9,7 +9,8 @@ var movies=
 [
 /*['name',`${ms}lnk`,mid,'img', cat],*/
 /*['name',`${ms}lnk`,mid,'img', cat],*/
-['Spider-Man No Way Home','30wVbaR',`${ms}HollyWood/Spider-Man.No.Way.Home.2021.HDTV/Spider-Man.No.Way.Home.2021.480p.HDTC.HINDI.DUB-DudeFilms.in.mkv`,3],
+
+['Looop Lapeta','3L2NtYi',`${ms}BollyWood/NetFlix/Looop.Lapeta.2022/Looop.Lapeta.2022.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
 ['The Kapil: Im not done...','3g49h7P',`${ms}TV.Show/Kapil.Sharma.Im.Not.Done.Yet.2022/Kapil.Sharma.Im.Not.Done.Yet.2022.480p.NF.WEB-DL.DDP5.1.x264-DudeFilms.in.mkv`,1],
 ['Churuli','3IAslH3',`${ms}BollyWood/Churuli.2021/Churuli.2021.Hindi.Malayalam.480p.WEB-DL.ESub-DudeFilms.in.mkv`,2],
 ['36 Farmhouse','3qMT1hy',`${ms}BollyWood/Zee5/36.Farmhouse.2022/36.Farmhouse.2022.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
@@ -66,6 +67,9 @@ var webseries=
 [
 /*change the episod number to '01' */
 /*[name,bitly img id,totalEpisods,fristEpisodeLink],*/
+["Rocket Boys s1","3onJv2E",8,"__wsdomain/WebSeries/Sony.Liv/Rocket.Boys.S01/Rocket.Boys.S01.E01.Hindi.720p.WEB-DL.ESub-DudeFilms.in.mkv"],
+["The Great Indian Murder s1","3AVPAsq",9,"__wsdomain/WebSeries/hotstar/The.Great.Indian.Murder.S01/The.Great.Indian.Murder.S01.E01.720p.HS.WEB-DL.DD+5.1.H.265-DudeFilms.in.mkv"],
+["Feria The Darkest Light","3siBvBb",8,"__wsdomain/WebSeries/NetFlix/Feria.The.Darkest.Light.S01/Feria.The.Darkest.Light.S01.E01.720p.10Bit.Hindi.English.Esubs-DudeFilms.in.mkv"],
 ["All of Us are DAEd","35oVTc8",12,"__wsdomain/WebSeries/NetFlix/All.Of.Us.Are.Dead.S01/All.Of.Us.Are.Dead.S01.E01.Hindi-English-Korean.720p.(10bit).WEB-DL.ESub-DudeFilms.in.mkv"],
 ["Unpaused Naya Safar","3FT1vbo",5,"__wsdomain/WebSeries/Amazon.Prime/Unpaused.Naya.Safar.S01/Unpaused.Naya.Safar.S01.E01.Hindi.720p.WEB-DL.ESub-DudeFilms.in.mkv"],
 ["Bhaukaal Season 2","3IndHCB",10,"__wsdomain/WebSeries/MxPlayer/Bhaukaal.S02/Bhaukaal.S02.E01.Hindi.720p.WEB-DL.ESub-DudeFilms.in.mkv"],
