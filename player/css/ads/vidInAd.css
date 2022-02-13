@@ -12,8 +12,8 @@
 	visibility: visible;	
 }
 .vidPan .vidInAds .mnContent{
-	height: 90%;
-	width: 90%;
+	height: 100%;
+	width: 100%;
 	background: #fff;
 	box-shadow: 0 10px 90px #00a3ca66;
 	border-radius: 5px;

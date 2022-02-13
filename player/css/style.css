@@ -6,7 +6,7 @@ button a{
 	color: unset;
 }
 .tran{
-	transform: scale(1.2);
+	transform: scale(.8);
 	transition: all ease-in-out .12s;
 }
 .tran.active{

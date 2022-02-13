@@ -30,14 +30,14 @@ ads={
 	},
 	addAdsInVid: ()=>{
 		ads.adsList=adAry;
-		ads.head.innerHTML=`<span col="#005aff" fs="1.2em">/...Some great <b>Deals</b> on Amazon.</span>`;
+		ads.head.innerHTML=`<span col="#005aff" fs="1.2em">/...Some great <b>Deals</b> here.</span>`;
 		ads.adBox.innerHTML=ads.getRandomBanner();
 		resetFormat();
 	},
 
 	getRandomBanner:()=>{
-		let html='<div class="flex">',
-		space=Math.floor(video.offsetWidth * 90/100);
+		let html=adsFun.brandHtml()+'<div class="flex">',
+		space=Math.floor((video.offsetWidth-300) * 90/100);
 		for(let i=0; i< space; i+=250){
 			let amalnk=ads.adsList.splice(Math.floor(Math.random()*(ads.adsList.length)),1)[0];
 			html+=amalnk[0];

@@ -48,9 +48,8 @@
 	font-size: 1.1em;
 	color: #ff065a;
 }
-#lnkIn{
+.dg input{
 	margin-top: 10px;
 	border-left: 1px solid #666;
-	border-radius: 1px;
 	color: #333;
 }

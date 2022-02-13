@@ -37,7 +37,7 @@
 .content .listPan{
   flex-flow: row wrap;  
 }
-.content .listPan .moviePan{
+.moviePan{
   margin: 15px;
   width: 300px;
   border-radius: 3px;
