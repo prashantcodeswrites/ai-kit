@@ -90,7 +90,7 @@ var adsFun={
 var brData=[],nbx=0;
 function getBrData(){
 	nbx=0;brData=[];
-	makeAdForm("Phone No.","+91 ");
+	makeAdForm("Phone No.","+91 ","tel");
 	dialog.success=()=>{
 		if(nbx==0){
 			makeAdForm("Your Name");
@@ -112,9 +112,9 @@ function sendBrandData(){
 	})
 }
 
-function makeAdForm(toask,def=""){
+function makeAdForm(toask,def="",type="text"){
 	var html=`<span fs="1.2em">Thanks for your Interest</span>
-		<input placeholder="${toask}" type="tel" id="dIn" class="noBtn" value="${def}">`;
+		<input placeholder="${toask}" type="${type}" id="dIn" class="noBtn" value="${def}">`;
 	dialog.inside(html);
 	dialog.buttons("Cancel","Next")
 	dialog.show();
