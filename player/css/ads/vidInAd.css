@@ -6,43 +6,39 @@
 	left: 0;
 	display: none;
 	visibility: none;
+	color: #444;
 }
+.shareBx{
+	width: 269px;
+	height: 166px;
+	border: 2px solid #f61740;
+	border-radius: 118px;
+}
+.shareBx p{
+	
+}
+.shareBx .lined::after,
+.shareBx .lined::before{
+	background: #333;	
+}
+
+.shareBx .lined{
+	margin: 10px 0 0;
+}
+.shareBx > *{
+	margin: 10px 0;
+}
+.shareBx button{
+	margin: 0 5px;
+	padding: 10px;
+	background: #f00;
+	border-radius: 50%;
+	fill: #fff;
+}
+
 .vidPan .vidInAds.active{
 	display: flex;
 	visibility: visible;	
-}
-.vidPan .vidInAds .mnContent{
-	height: 100%;
-	width: 100%;
-	background: #fff;
-	box-shadow: 0 10px 90px #00a3ca66;
-	border-radius: 5px;
-	color: #000;
-}
-.vidPan .vidInAds .mnContent .head{
-	padding: 10px;
-}
-
-.vidPan .vidInAds .mnContent .ads iframe{
-	margin: 15px;
-}
-.vidPan .vidInAds .mnContent .ads ol li{
-	padding: 5px 0;
-}
-
-
-.vidPan .vidInAds .mnContent #adSkiper{
-	position: absolute;
-	right: 0;
-	bottom: 20px;
-	background: #526bff24;
-	color: #000;
-	padding: 10px 20px;
-	pointer-events: none;
-	border-left: 2px solid #526bff;
-}
-.vidPan .vidInAds .mnContent #adSkiper.active{
-	pointer-events: auto;
 }
 @media screen and (max-width: 550px){
 .vidPan .vidInAds .mnContent .head{

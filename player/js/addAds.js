@@ -24,7 +24,6 @@ var adsFun={
 		for(let i=0; i<moviePan.length; i++){
 			moviePan[i].classList.remove("noAd");
 			if(adsFun.num==0){
-				log("ac")
 				moviePan[i].insertAdjacentHTML("afterend",adsFun.brandHtml());
 				adsFun.num++;
 				resetFormat();

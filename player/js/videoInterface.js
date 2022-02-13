@@ -43,7 +43,7 @@ var mid=undefined,mlnk,sh,ws,mname;
 var params=decodeURI(location.search.replace("?",''));
 params=params.split('&');
 for(let a=0; a<params.length; a++){
-	eval(params[a])
+	eval(params[a]);
 }
 
 // try{history.replaceState('/','/',);}catch{}
@@ -81,21 +81,26 @@ function setMovie(lnk,name,midx=false){
 	var elem="";
 	try{op(".currentVideo .curData").remove()}catch{}
 	if(video.src.startsWith("http")){
+		try{hrShare.start(vidSource.name);}catch{}
 		elem=`<div class="curData flex">
 					<div class="flex" ico="download" onclick="checkDownTrue('${video.src}')" bg="#ffa700"></div>
-					<div class="flex" ico="share" onclick="shareCurent()" bg="lime" ></div>
+					<div class="flex" ico="send" onclick="shareCurent()" bg="lime" ></div>
 				</div>`;
 	}
 	curVidDataPan.elem.insertAdjacentHTML("beforeend",elem)
 	resetFormat();
 }
-function shareCurent(){
+function getLinkOrMid(){
 	let midx=video.getAttribute("mid"),lnkx;
 	if(midx){
 		lnkx=`https://ai-player.netlify.app?mid=${midx}`;
 	}else{
 		lnkx=`https://ai-player.netlify.app?mlnk='${video.src}'`;
 	}
+	return lnkx+"&sh=17";
+}
+function shareCurent(){
+	var lnkx=getLinkOrMid();
 	shareApp({title: vidSource.name,text: `Direct link for ${vidSource.name}`, url:lnkx})
 }
 
@@ -275,7 +280,6 @@ function vidOnStart(){
 	}else{
 		quality.btn.style.display="none"
 	}
-	try{ads.start();}catch{}
 }
 
 function stopPlaying(){/*to stop the video forcefully*/
@@ -293,7 +297,7 @@ function stopPlaying(){/*to stop the video forcefully*/
 	vidPan.classList.remove("active");
 	curVidDataPan.elem.classList.remove("active")
 	video.src='';
-	// try{ads.close();}catch{}
+	try{hrShare.end();}catch{}
 }
 
 /*screen rotate for get full screen*/
