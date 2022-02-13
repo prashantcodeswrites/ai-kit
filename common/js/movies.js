@@ -134,3 +134,4 @@ for(let i=0; i <webseries.length; i++){
 webseries=tempSr;
 function get2dNum(n){
 	return n>9?n:"0"+n;
+}
