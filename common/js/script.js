@@ -8,7 +8,7 @@ function resetFormat(){
     fs: "fontSize",
     ff: "fontFamily",
     fw: "fontWeight",
-    bg: "backgroundColor"
+    bg: "background"
   }
   for(let val in keys){
     opp(`*[${val}]`).forEach(elem=>{

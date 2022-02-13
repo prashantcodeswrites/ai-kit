@@ -13,7 +13,6 @@ var movies=
 ['Gehraiyaan','3uMnI8P',`${ms}BollyWood/Amazon.Prime/Gehraiyaan.2022/Gehraiyaan.2022.480p.AMZN.WEB-DL.Esub-DudeFilms.in.mkv`,1],
 ['Moonfall','3LuVplp',`${ms}HollyWood/Moonfall.2022.CamRip/Moonfall.2022.Hindi.English.480p.CAMRip-DudeFilms.in.mkv`,3],
 ['Looop Lapeta','3L2NtYi',`${ms}BollyWood/NetFlix/Looop.Lapeta.2022/Looop.Lapeta.2022.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
-['Looop Lapeta','3L2NtYi',`${ms}BollyWood/NetFlix/Looop.Lapeta.2022/Looop.Lapeta.2022.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
 ['The Kapil: Im not done...','3g49h7P',`${ms}TV.Show/Kapil.Sharma.Im.Not.Done.Yet.2022/Kapil.Sharma.Im.Not.Done.Yet.2022.480p.NF.WEB-DL.DDP5.1.x264-DudeFilms.in.mkv`,1],
 ['Churuli','3IAslH3',`${ms}BollyWood/Churuli.2021/Churuli.2021.Hindi.Malayalam.480p.WEB-DL.ESub-DudeFilms.in.mkv`,2],
 ['36 Farmhouse','3qMT1hy',`${ms}BollyWood/Zee5/36.Farmhouse.2022/36.Farmhouse.2022.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
