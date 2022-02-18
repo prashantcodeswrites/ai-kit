@@ -10,6 +10,11 @@ var movies=
 /*['name',`${ms}lnk`,mid,'img', cat],*/
 /*['name',`${ms}lnk`,mid,'img', cat],*/
 
+['Fistful of Vengeance','34M1Ekq',`${ms}HollyWood/NetFlix%20Movies/Fistful.of.Vengeance.2022/Fistful.of.Vengeance.2022.480p.(Hindi+English).NF.WEB-DL.Esub-DudeFilms.in.mkv`,1],
+['A Thursday','36dVARS',`${ms}BollyWood/hotstar/A.Thursday.2022/A.Thursday.2022.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
+['Ala.Vaikunthapurramuloo','3LH2v6l',`${ms}SouthMovies/Ala.Vaikunthapurramuloo.2020/Ala.Vaikunthapurramuloo.2020.Hindi.Telugu.480p.WEB-HDRip.ESub-DudeFilms.in.mkv`,2],
+['Love Story','3JAy7c2',`${ms}SouthMovies/Love.Story.2021/Love.Story.2021.Hindi.Telugu.480p.WEB-DL.ESub-DudeFilms.in.mkv`,2],
+['Badhaai Do','3s1vABy',`${ms}BollyWood/Badhaai.Do.2022.CamRip/Badhaai.Do.2022.Hindi.480p.CAMRip-DudeFilms.in.mkv`,1],
 ['Gehraiyaan','3uMnI8P',`${ms}BollyWood/Amazon.Prime/Gehraiyaan.2022/Gehraiyaan.2022.480p.AMZN.WEB-DL.Esub-DudeFilms.in.mkv`,1],
 ['Moonfall','3LuVplp',`${ms}HollyWood/Moonfall.2022.CamRip/Moonfall.2022.Hindi.English.480p.CAMRip-DudeFilms.in.mkv`,3],
 ['Looop Lapeta','3L2NtYi',`${ms}BollyWood/NetFlix/Looop.Lapeta.2022/Looop.Lapeta.2022.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
@@ -69,6 +74,9 @@ var webseries=
 [
 /*change the episod number to '01' */
 /*[name,bitly img id,totalEpisods,fristEpisodeLink],*/
+["Dexter New Blood","3oXSiIY",10,"__wsdomain/WebSeries/Dexter.New.Blood.S01/Dexter.New.Blood.S01.E01.Hindi.English.720p.HEVC.10bit.WEB-DL.ESub-DudeFilms.in.mkv"],
+["Raising Dion","3p0ddLv",9,"__wsdomain/WebSeries/NetFlix/Raising.Dion/S01/Raising.Dion.S01.E01.720p.Hindi.English.Esub-DudeFilms.in.mkv"],
+["Inventing Anna","3I8QBAg",9,"__wsdomain/WebSeries/NetFlix/Inventing.Anna.S01/Inventing.Anna.S01.E01.Hindi.English.720p.HEVC.10bit.WEB-DL.ESub-DudeFilms.in.mkv"],
 ["Rocket Boys s1","3onJv2E",8,"__wsdomain/WebSeries/Sony.Liv/Rocket.Boys.S01/Rocket.Boys.S01.E01.Hindi.720p.WEB-DL.ESub-DudeFilms.in.mkv"],
 ["The Great Indian Murder s1","3AVPAsq",9,"__wsdomain/WebSeries/hotstar/The.Great.Indian.Murder.S01/The.Great.Indian.Murder.S01.E01.720p.HS.WEB-DL.DD+5.1.H.265-DudeFilms.in.mkv"],
 ["Feria The Darkest Light","3siBvBb",8,"__wsdomain/WebSeries/NetFlix/Feria.The.Darkest.Light.S01/Feria.The.Darkest.Light.S01.E01.720p.10Bit.Hindi.English.Esubs-DudeFilms.in.mkv"],
