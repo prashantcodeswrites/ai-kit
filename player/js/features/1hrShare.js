@@ -23,7 +23,7 @@ var hrShare={
 	},
 
 	closeShare:()=>{
-		if(Blur.time>10){
+		if(Blur.time>15){
 			playPause();
 			hrShare.adPan.classList.remove("active");
 			clearInterval(hrShare.tim);
