@@ -196,7 +196,6 @@ function skip(time){
 	clearTimeout(skipResetTime);
 	
 	skipResetTime=setTimeout(()=>{
-		log(skipping)
 		skipping=0;
 		message(null)
 	},500)
@@ -377,3 +376,25 @@ return ('ontouchstart' in window) ||
 function isDownLoaded() {
   return (window.matchMedia('(display-mode: standalone)').matches);
 }
+
+
+/*Blur functions*/
+var Blur={
+	time:0,countInt:false,blurChecking:false,
+	addChecker: ()=>{
+		window.addEventListener("blur",Blur.count);
+		window.addEventListener("focus",Blur.stopCount);
+	},
+	count: ()=>{
+		if(Blur.blurChecking){
+			Blur.time=0;
+			Blur.countInt=setInterval(()=>{
+				Blur.time++;
+			},1000)
+		}
+	},
+	stopCount: ()=>{
+		clearInterval(Blur.countInt);
+	}
+};
+Blur.addChecker();

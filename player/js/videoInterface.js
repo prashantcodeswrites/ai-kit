@@ -12,7 +12,12 @@ timeChInterval,
 vidDuration,
 videoApplied=false,
 msgInterval,
-videoStoringInterval;
+videoStoringInterval,
+vidHistory=localStorage.getItem("vidHistory") || [];
+if(typeof vidHistory=="string"){
+	vidHistory=vidHistory.split(",")
+}
+log(vidHistory)
 
 /*get player start*/
 
@@ -46,9 +51,6 @@ for(let a=0; a<params.length; a++){
 	eval(params[a]);
 }
 
-// try{history.replaceState('/','/',);}catch{}
-
-
 var vidSource={};
 
 if(mlnk){
@@ -67,6 +69,7 @@ localStorage.removeItem("aiCurVid");
 
 
 function setMovie(lnk,name,midx=false){
+	if(midx){updateHistory(midx)}
 	vidSource={
 		name,
 		src: lnk,
@@ -81,7 +84,6 @@ function setMovie(lnk,name,midx=false){
 	var elem="";
 	try{op(".currentVideo .curData").remove()}catch{}
 	if(video.src.startsWith("http")){
-		try{hrShare.start(vidSource.name);}catch{}
 		elem=`<div class="curData flex">
 					<div class="flex" ico="download" onclick="checkDownTrue('${video.src}')" bg="#ffa700"></div>
 					<div class="flex" ico="send" onclick="shareCurent()" bg="lime" ></div>
@@ -91,6 +93,9 @@ function setMovie(lnk,name,midx=false){
 	resetFormat();
 }
 function getLinkOrMid(){
+	if(!video.src.startsWith("http")){
+		return `https://ai-player.netlify.app?sh=17`;
+	}
 	let midx=video.getAttribute("mid"),lnkx;
 	if(midx){
 		lnkx=`https://ai-player.netlify.app?mid=${midx}`;
@@ -280,6 +285,7 @@ function vidOnStart(){
 	}else{
 		quality.btn.style.display="none"
 	}
+	try{hrShare.start(vidSource.name);}catch{}	
 }
 
 function stopPlaying(){/*to stop the video forcefully*/
@@ -363,5 +369,12 @@ function saveDownData(kind="set"){
 		localStorage.setItem("downloadExperience",Number(localStorage.getItem("downloadExperience"))+1)
 	}else{
 		localStorage.removeItem("downloadedSomething");
+	}
+}
+function updateHistory(midx){
+	log(midx)
+	if(vidHistory[0]!=midx){
+		vidHistory.unshift(midx);
+		localStorage.setItem("vidHistory",vidHistory.join(","));
 	}
 }

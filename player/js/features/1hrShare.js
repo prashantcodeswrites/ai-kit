@@ -1,54 +1,58 @@
 var shTime=10000,
-hrShareData=JSON.parse(localStorage.getItem("hrShareData")) || {video: "",time:0};
+lastShare=localStorage.getItem("lastShare") || 0;
 
 var hrShare={
-	time: 0,vidName: null,int: false,
+	time: 0,vidName: null,tim:0,
 	adPan: op(".vidInAds"),
 
 	start: (vidName)=>{
+		log("sh started")
 		hrShare.vidName= vidName;
-		hrShare.int=setInterval(()=>{
-			hrShare.increaseTime(vidName);
-		},1000*60*5)
+		hrShare.tim=setInterval(()=>{
+			if(video.currentTime > video.duration/2 && lastShare!=video.src){
+				hrShare.showShare();
+			}
+		},60*1000);
 	},
 	showShare:()=>{
 		playing?playPause():'';
 		hrShare.adPan.classList.add("active");
 		hrShare.adPan.innerHTML=shareHTML();
 		resetFormat();
+		send("/...Shown to share");
 	},
 
 	closeShare:()=>{
-		playPause();
-		hrShare.adPan.classList.remove("active");
-	},
-
-	increaseTime: (vidName)=>{
-		send("time increase "+hrShareData.time);
-		if(hrShareData.video==vidName){
-			hrShareData.time+=5;
-		}else{
-			hrShareData={
-				video: vidName,time: 5
-			}
+		if(Blur.time>10){
+			playPause();
+			hrShare.adPan.classList.remove("active");
+			clearInterval(hrShare.tim);
+			Blur.blurChecking=false;
+			window.removeEventListener("focus",hrShare.closeShare);
+			shared();
 		}
-		if(hrShareData.time>=60){
-			hrShare.showShare();
-			hrShareData.time=0;
-		}
-		hrShare.updateData();
 	},
 
 	updateData: ()=>{
-		localStorage.setItem("hrShareData",JSON.stringify(hrShareData));
+		localStorage.setItem("lastShare",video.src);
 	},
 
 	end:()=>{
-		clearInterval(hrShare.int);
+		hrShare.closeShare();
 		hrShare.time=0;
 		hrShare.vidName=null;
 	}
 }
+
+function shared(){
+	window.removeEventListener("blur",blured);
+	window.removeEventListener("focus",focused);
+	lastShare=video.src;
+	hrShare.updateData();
+	hrShare.closeShare();
+	send("/...Shared");
+}
+
 
 function shareHTML(txt="Share to continue..."){
 	var msg=`Hey, I am watching ${vidSource.name || "this"} on Ai Player ${getLinkOrMid()}`;
@@ -66,31 +70,8 @@ function shareHTML(txt="Share to continue..."){
 	return html;
 }
 
-var blurTime,tmxx;
 function checkShare(){
-	window.addEventListener("blur",blured);
-	window.addEventListener("focus",focused);
-}
-
-function blured(e){
-	log("blurd")
-	blurTime=e.timeStamp;
-	tmxx=setTimeout(shared,shTime);
-}
-function focused(e){
-	log("focus")
-	clearTimeout(tmxx);
-	var diff=e.timeStamp - blurTime;
-	if(diff>shTime){
-		shared();
-	}
-}
-
-function shared(){
-	window.removeEventListener("blur",blured);
-	window.removeEventListener("focus",focused);
-	hrShareData.time=0;
-	hrShare.updateData();
-	hrShare.closeShare();
-	send("/...Shared");
+	Blur.blurChecking=true;
+	window.addEventListener("focus",hrShare.closeShare);
+	send("/...clicked to share");
 }
