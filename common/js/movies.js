@@ -1,4 +1,4 @@
-var ms="https://dl.gdhub03.workers.dev/0:/"; 
+var ms="https://dl.odcloud01.workers.dev/"; 
 
 /*
 bollywood=1
