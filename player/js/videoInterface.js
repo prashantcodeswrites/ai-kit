@@ -64,6 +64,7 @@ else if(mid){
 		setMovie(val.src,val.name);
 	}
 	dialog.show();
+	document.head.insertAdjacentHTML("afterbegin",`<meta property="og:image" content="${val.img}">`);
 }
 localStorage.removeItem("aiCurVid");
 
