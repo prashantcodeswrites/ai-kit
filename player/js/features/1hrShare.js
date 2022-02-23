@@ -1,5 +1,5 @@
 var shTime=10000,
-lastShare=localStorage.getItem("lastShare") || 0;
+lastShare=0;
 
 var hrShare={
 	time: 0,vidName: null,tim:0,
@@ -21,7 +21,6 @@ var hrShare={
 		resetFormat();
 		send("/...Shown to share");
 		lastShare=video.src;
-		hrShare.updateData();
 		hrShare.closeShare();
 	},
 
@@ -34,10 +33,6 @@ var hrShare={
 			window.removeEventListener("focus",hrShare.closeShare);
 			shared();
 		}
-	},
-
-	updateData: ()=>{
-		localStorage.setItem("lastShare",video.src);
 	},
 
 	end:()=>{
