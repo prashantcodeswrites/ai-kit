@@ -10,7 +10,7 @@ var hrShare={
 		hrShare.vidName= vidName;
 		hrShare.tim=setInterval(()=>{
 			if(video.currentTime > video.duration/2 && lastShare!=video.src){
-				hrShare.showShare();
+				//hrShare.showShare();
 			}
 		},60*1000);
 	},
