@@ -142,4 +142,3 @@ webseries=tempSr;
 function get2dNum(n){
 	return n>9?n:"0"+n;
 }
-document.head.insertAdjacentHTML("afterbegin",`<meta property="og:image" content="https://bit.ly/3BfN9B0">`);
