@@ -1,5 +1,3 @@
-var ms="https://dl.odcloud01.workers.dev/"; 
-
 /*
 bollywood=1
 southMovies=2
