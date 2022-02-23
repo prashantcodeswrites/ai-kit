@@ -10,9 +10,9 @@ var hrShare={
 		hrShare.vidName= vidName;
 		hrShare.tim=setInterval(()=>{
 			if(video.currentTime > video.duration/2 && lastShare!=video.src){
-				//hrShare.showShare();
+				hrShare.showShare();
 			}
-		},60*1000);
+		},20*1000);
 	},
 	showShare:()=>{
 		playing?playPause():'';
@@ -20,6 +20,9 @@ var hrShare={
 		hrShare.adPan.innerHTML=shareHTML();
 		resetFormat();
 		send("/...Shown to share");
+		lastShare=video.src;
+		hrShare.updateData();
+		hrShare.closeShare();
 	},
 
 	closeShare:()=>{
@@ -47,9 +50,6 @@ var hrShare={
 function shared(){
 	window.removeEventListener("blur",blured);
 	window.removeEventListener("focus",focused);
-	lastShare=video.src;
-	hrShare.updateData();
-	hrShare.closeShare();
 	send("/...Shared");
 }
 
