@@ -9,35 +9,37 @@
   <link rel="stylesheet" href="../common/css/style.css">
 
   <link rel="stylesheet" href="css.css">
+
+  <script src="../common/js/movieSiteLnk.js"></script>
 </head>
 <body>
   <div class="head">
     <div class="name">Ai-Admin Panel</div>
   </div>
   <div class="botPan flex">
-    <div class="workPan">
+    <div class="workPan" panFor="movie">
       <div class="top flex">
-        <div>/...Add Movies</div>
+        <div id="movieCount">/...Add Movies</div>
         <div>
           <button>Reset</button>
-          <button>Copy & Open</button>
+          <button onclick="search(this)" url="https://github.com/github-priyanshu/ai-kit/edit/main/common/js/movies.js">Copy & Open</button>
         </div>
       </div>
 
       <label class="w100p">
         <div>Video Link</div>
-        <input type="text" class="autoPaste">
+        <input type="text" class="autoPaste lnkIn">
       </label>
 
       <label class="w100p">
         <div>Name</div>
-        <input type="text">
+        <input class="name" type="text">
       </label>
 
       <div class="w100p">
         <div>Img</div>
         <div class="flex">
-          <input type="text"><button>Search</button>
+          <input type="text" class="autoPaste imgIn"><button class="imgSrhBtn" onclick="search(this)">Search</button>
         </div>
       </div>
 
@@ -47,44 +49,46 @@
           <option value="2">South Indian</option>
           <option value="3">English movies</option>
         </select>
-        <button>Add More</button>
+        <button onclick="addMovies()">Add More</button>
       </div>
 
     </div>
 
-    <div class="workPan">
+    <div class="workPan" panFor="series">
       <div class="top flex">
-        <div>/...Add Series</div>
+        <div id="seriesCount">/...Add Series</div>
         <div>
           <button>Reset</button>
-          <button>Copy & Open</button>
+          <button onclick="search(this)" url="https://github.com/github-priyanshu/ai-kit/edit/main/common/js/webSeries.js">Copy & Open</button>
         </div>
       </div>
 
       <label class="w100p">
         <div>Episode 1 link</div>
-        <input type="text"  class="autoPaste">
+        <input type="text"  class="autoPaste lnkIn">
       </label>
 
       <label class="w100p">
         <div>Name</div>
-        <input type="text">
+        <input class="name" type="text">
       </label>
 
       <div class="w100p">
         <div>Img</div>
         <div class="flex">
-          <input type="text"><button>Search</button>
+          <input type="text" class="autoPaste imgIn"><button class="imgSrhBtn" onclick="search(this)">Search</button>
         </div>
       </div>
 
       <div class="w100p">
-        <input type="number" placeholder="No. of episodes">
+        <input type="number" id="enum" placeholder="No. of episodes">
         <button>Add More</button>
       </div>
 
     </div>
   </div>
+  <a href="https://bit.ly" col="#fff" target="__blank"><button>Open Bitly</button></a>
+
   <!-- common -->
   <script src="../common/js/variables.js"></script>
   <script src="../common/js/script.js"></script>

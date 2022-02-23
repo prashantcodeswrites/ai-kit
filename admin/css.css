@@ -31,9 +31,9 @@ body{
 .botPan .workPan input[type='text']{
 	width: 100%;
 }
-.workPan select,
-.workPan button,
-.workPan input{
+select,
+button,
+input{
 	display: inline-block;
 	height: 35px;
 	background: #444;
@@ -44,9 +44,9 @@ body{
 	color: #fff;
 }
 
-.workPan select:active,
-.workPan button:active,
-.workPan input:active{
+select:active,
+button:active,
+input:active{
 	background: #222;
 }
 .workPan input{
