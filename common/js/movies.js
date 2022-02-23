@@ -7,6 +7,7 @@ var movies=
 [
 /*['name',`${ms}lnk`,mid,'img', cat],*/
 /*['name',`${ms}lnk`,mid,'img', cat],*/
+
 ['Fistful of Vengeance','34M1Ekq',`${ms}HollyWood/NetFlix%20Movies/Fistful.of.Vengeance.2022/Fistful.of.Vengeance.2022.480p.(Hindi+English).NF.WEB-DL.Esub-DudeFilms.in.mkv`,1],
 ['A Thursday','36dVARS',`${ms}BollyWood/hotstar/A.Thursday.2022/A.Thursday.2022.Hindi.480p.WEB-DL.ESub-DudeFilms.in.mkv`,1],
 ['Ala.Vaikunthapurramuloo','3LH2v6l',`${ms}SouthMovies/Ala.Vaikunthapurramuloo.2020/Ala.Vaikunthapurramuloo.2020.Hindi.Telugu.480p.WEB-HDRip.ESub-DudeFilms.in.mkv`,2],
